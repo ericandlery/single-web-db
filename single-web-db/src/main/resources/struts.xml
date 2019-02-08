@@ -8,6 +8,7 @@
 	
 	<!-- Test Block -->
 	<package name="test" namespace="/test" extends="struts-default">
+		<default-action-ref name="testXML"/>
 		<action name="testXML" class="test.TestXMLAction">
 			<result>test.jsp</result>
 		</action>
