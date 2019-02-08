@@ -5,5 +5,12 @@
 <struts>
 
 <!-- 	<constant name="struts.devMode" value="true" /> -->
+	
+	<!-- Test Block -->
+	<package name="test" namespace="/test" extends="struts-default">
+		<action name="testXML" class="test.TestXMLAction">
+			<result>test.jsp</result>
+		</action>
+	</package>
 
 </struts>
