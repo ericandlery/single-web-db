@@ -5,7 +5,7 @@
 <configuration>
 
 	<!-- Use this properties to load the jdbc info. -->
-<!-- 	<properties resource="jdbc.properties"/> -->
+	<properties resource="jdbc.properties"/>
 
 <!-- 	<typeAliases> -->
 <!--     	<typeAlias alias="Emp" type="mybatis.bean.Emp"/> -->
@@ -20,20 +20,20 @@
             <transactionManager type="JDBC"/>
             
             <!-- JDBC -->
-<!--             <dataSource type="POOLED"> -->
+            <dataSource type="POOLED">
 <!--                 <property name="driver" value="com.mysql.cj.jdbc.MysqlConnectionPoolDataSource"/> -->
-<!--                 <property name="driver" value="${driver}"/> -->
-<!--                 <property name="url" value="${url}"/> -->
-<!--                 <property name="username" value="${username}"/> -->
-<!--                 <property name="password" value="${password}"/> -->
-<!--             </dataSource> -->
+                <property name="driver" value="${driver}"/>
+                <property name="url" value="${url}"/>
+                <property name="username" value="${username}"/>
+                <property name="password" value="${password}"/>
+            </dataSource>
             
             <!-- JNDI and DataSource -->
-            <dataSource type="JNDI">
+<!--             <dataSource type="JNDI"> -->
 <!--                 <property name="driver" value="com.mysql.cj.jdbc.MysqlConnectionPoolDataSource"/> -->
-                <property name="data_source" value="jdbc/mysql"/>
+<!--                 <property name="data_source" value="jdbc/mysql"/> -->
 <!--                 <property name="initial_context" value="java:/comp/env"/> -->
-            </dataSource>
+<!--             </dataSource> -->
             
         </environment>
     </environments>

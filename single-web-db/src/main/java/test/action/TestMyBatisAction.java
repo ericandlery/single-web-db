@@ -1,6 +1,7 @@
 package test.action;
 
 import java.io.Reader;
+import java.util.List;
 
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -32,8 +33,12 @@ public class TestMyBatisAction extends ActionSupport{
 		ssf.getConfiguration().addMapper(TestMapper.class);
 		s=ssf.openSession();
 		
-		Object o=(Object)s.selectOne("getVersion");
-		ServletActionContext.getRequest().setAttribute("obj",o);
+//		Object o=(Object)s.selectOne("getVersion");
+//		ServletActionContext.getRequest().setAttribute("obj",o);
+		
+		List<String> list=s.selectList("getNames");
+		
+		ServletActionContext.getRequest().setAttribute("list",list);
 		
 		s.rollback();
 		s.close();
