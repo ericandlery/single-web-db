@@ -4,6 +4,7 @@
 	<New id="mysql" class="org.eclipse.jetty.plus.jndi.Resource">
 		<Arg>jdbc/mysql</Arg>
 		<Arg>
+			<!-- Notice that the driver is a ConnectionPool driver for webapps. -->
 			<New class="com.mysql.cj.jdbc.MysqlConnectionPoolDataSource">
 				<Set name="DatabaseName">classicmodels</Set>
 				<Set name="User">root</Set>
