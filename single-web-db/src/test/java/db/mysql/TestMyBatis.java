@@ -32,6 +32,9 @@ public class TestMyBatis {
 		List<String> list=s.selectList("getNames");
 		System.out.println(list);
 		
+		System.out.println((String)s.selectOne("getNameById",103));
+		System.out.println((String)s.selectOne("getNameById2",103));
+		
 //		ResultSet rs=s.getConnection().prepareStatement("select version()").executeQuery();
 //		while(rs.next()) {
 //			System.out.println(rs.getObject(1));

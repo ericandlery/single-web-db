@@ -6,7 +6,7 @@
 	<display-name>single-web-db</display-name>
 	
 	<welcome-file-list>
-		<welcome-file>test/test.jsp</welcome-file>
+		<welcome-file>WEB-INF/content/index.jsp</welcome-file>
 	</welcome-file-list>
 
 	<!-- Enable servlets as welcome files -->
